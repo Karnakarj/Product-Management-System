@@ -1,0 +1,40 @@
+<div class="board">
+  <header>
+    <h2>Task Manager</h2>
+    <button (click)="addTask()">+ New Task</button>
+  </header>
+
+  <div class="columns">
+
+    <div class="column todo">
+      <h3>To Do</h3>
+      <app-task-card
+        *ngFor="let task of getByStatus('todo')"
+        [task]="task"
+        (update)="update($event)"
+        (remove)="remove($event)">
+      </app-task-card>
+    </div>
+
+    <div class="column progress">
+      <h3>In Progress</h3>
+      <app-task-card
+        *ngFor="let task of getByStatus('inprogress')"
+        [task]="task"
+        (update)="update($event)"
+        (remove)="remove($event)">
+      </app-task-card>
+    </div>
+
+    <div class="column done">
+      <h3>Done</h3>
+      <app-task-card
+        *ngFor="let task of getByStatus('done')"
+        [task]="task"
+        (update)="update($event)"
+        (remove)="remove($event)">
+      </app-task-card>
+    </div>
+
+  </div>
+</div>
