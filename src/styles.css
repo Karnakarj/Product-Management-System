@@ -1,7 +1,5 @@
-/* Global styles */
-/* Intentionally minimal – clarity > over design */
-
 body {
   margin: 0;
   background: #f8fafc;
+  font-family: Arial, sans-serif;
 }
